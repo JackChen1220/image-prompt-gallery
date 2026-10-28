@@ -1,5 +1,95 @@
 [
   {
+    "id": "travel-polaroid-3d",
+    "title": "拍立得3D公仔打卡",
+    "category": "插画与艺术",
+    "prompt": "根据图一，将照片中的人物转化为整体约1:4身高比例的3DQ版黏土风格角色公仔，公仔呈现全身，整体放置于一张拍立得照片中，并由一只手持握着拍立得相纸。画面呈现出人物从拍立得照片中突破边框、延伸进入现实世界的效果。并且背景与原图一致，延续拍立得中的背景，以Q版风格绘制，不需再有人物出现，仅作为角色背景的延伸，与照片原始场景一致。",
+    "tags": ["旅行", "拍立得", "3D", "Q版", "黏土公仔", "照片转绘", "参考图"],
+    "sourceLabel": "用户收录",
+    "sourceUrl": "",
+    "images": [
+      {
+        "src": "/images/travel-polaroid-3d.png",
+        "thumbnail": "/images/travel-polaroid-3d-thumb.webp",
+        "width": 2940,
+        "height": 1280,
+        "alt": "拍立得3D公仔打卡"
+      }
+    ]
+  },
+  {
+    "id": "travel-postcard",
+    "title": "景点明信片",
+    "category": "海报与排版",
+    "prompt": "将照片设计成复古旅行手账风明信片：保留原图主体与视角，转绘为清透的水彩插画，带自然晕染、纸张颗粒和不规则笔触边缘，柔和融入暖米白纸面。采用横版布局，右侧约60%区域放插画，插画略微收小，四周留出更宽的纸面，上下边缘保持呼吸感，笔触不要延伸至画布边缘。左侧疏朗排版：小编号、简短英文主题标题、LOCATION与DATE标签及空白横线，底部放三枚从照片提取的手绘色块。标题用复古衬线字体，整体清新、舒展、有旅行收藏感。只输出明信片设计平面图，去除原图水印与界面元素。",
+    "tags": ["旅行", "景点", "明信片", "水彩", "复古", "手账", "参考图"],
+    "sourceLabel": "用户收录",
+    "sourceUrl": "",
+    "images": [
+      {
+        "src": "/images/travel-postcard.png",
+        "thumbnail": "/images/travel-postcard-thumb.webp",
+        "width": 1280,
+        "height": 853,
+        "alt": "景点明信片"
+      }
+    ]
+  },
+  {
+    "id": "travel-sticker",
+    "title": "画面主体转贴纸",
+    "category": "插画与艺术",
+    "prompt": "将照片中间「最具辨识度的一座核心建筑」，重绘成手绘旅行贴纸。只处理这一处，保留其轮廓、比例与标志性细节，使用粗黑手绘线条、明快平涂色块和少量复古印刷纹理，沿外轮廓添加连续的宽白色模切边。贴纸原位覆盖建筑，略微放大，避免原边缘外露。周围的一切则保持原照片效果，不添加文字，不将整张图插画化。",
+    "tags": ["旅行", "建筑", "手绘贴纸", "模切白边", "局部重绘", "参考图"],
+    "sourceLabel": "用户收录",
+    "sourceUrl": "",
+    "images": [
+      {
+        "src": "/images/travel-sticker.png",
+        "thumbnail": "/images/travel-sticker-thumb.webp",
+        "width": 1280,
+        "height": 473,
+        "alt": "画面主体转贴纸"
+      }
+    ]
+  },
+  {
+    "id": "travel-portrait-poster",
+    "title": "人物旅游海报",
+    "category": "海报与排版",
+    "prompt": "以参考照片中的人物为主角，创作「广州」主题的复古旅行拼贴海报，保留五官辨识度与自然神态。用醒目的「GUANGZHOU」复古粗体标题，搭配城市地标、街景、美食、地图、票据和邮戳，结合撕纸边缘、印刷颗粒与少量手写短句，构图丰富、层次清晰。以中性米白纸底搭配自然蓝绿与砖红，略微减少黄调，保留复古质感，避免整体泛黄，肤色自然。",
+    "tags": ["旅行", "人物", "广州", "复古海报", "拼贴", "撕纸", "参考图"],
+    "sourceLabel": "用户收录",
+    "sourceUrl": "",
+    "images": [
+      {
+        "src": "/images/travel-portrait-poster.png",
+        "thumbnail": "/images/travel-portrait-poster-thumb.webp",
+        "width": 1280,
+        "height": 831,
+        "alt": "人物旅游海报"
+      }
+    ]
+  },
+  {
+    "id": "food-explosion",
+    "title": "美食炸弹",
+    "category": "产品与商业",
+    "prompt": "保持图片完全不变，仅以人物手持怼在镜头前的食物或饮品为中心，制造超写实的腾空飞溅瞬间。根据原有内容自然表现：固体翻腾散开，液体形成舒展的飞溅弧面与细小液滴，配料随之悬浮。动势从容器内部向上、向外并朝镜头展开，突出近大远小的透视与扑面而来的冲击感。保持容器完整，不添加无关食材，不遮挡人物面部。材质、光线与阴影融入原照片，呈现高速摄影定格般的清晰细节与广告质感，避免卡通感。",
+    "tags": ["美食", "饮品", "飞溅", "悬浮", "高速摄影", "广告摄影", "参考图"],
+    "sourceLabel": "用户收录",
+    "sourceUrl": "",
+    "images": [
+      {
+        "src": "/images/food-explosion.png",
+        "thumbnail": "/images/food-explosion-thumb.webp",
+        "width": 1960,
+        "height": 1280,
+        "alt": "美食炸弹"
+      }
+    ]
+  },
+  {
     "id": "45",
     "title": "人像写实摄影图",
     "category": "摄影与人像",
