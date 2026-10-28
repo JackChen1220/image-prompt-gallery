@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, ExternalLink, X } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ExternalLink,
+  Maximize2,
+  X,
+} from "lucide-react";
 import type { PromptItem } from "../types";
 import { CopyButton } from "./CopyButton";
+import { ImageDownloadLink } from "./ImageDownloadLink";
+import { ImagePreviewDialog } from "./ImagePreviewDialog";
 
 type Props = {
   item: PromptItem | null;
@@ -11,9 +19,11 @@ type Props = {
 export function PromptDialog({ item, onClose, onError }: Props) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [imageIndex, setImageIndex] = useState(0);
+  const [previewOpen, setPreviewOpen] = useState(false);
   useEffect(() => {
     if (!item) return;
     setImageIndex(0);
+    setPreviewOpen(false);
     const element = dialog.current!;
     const previousFocus = document.activeElement as HTMLElement | null;
     const oldOverflow = document.body.style.overflow;
@@ -29,14 +39,18 @@ export function PromptDialog({ item, onClose, onError }: Props) {
   const image = item.images[imageIndex] ?? item.images[0];
   const move = (direction: number) =>
     setImageIndex(
-      (imageIndex + direction + item.images.length) % item.images.length,
+      (current) =>
+        (current + direction + item.images.length) % item.images.length,
     );
   return (
     <dialog
       ref={dialog}
       className="prompt-dialog"
       aria-labelledby="prompt-title"
-      onCancel={onClose}
+      onCancel={(event) => {
+        event.preventDefault();
+        onClose();
+      }}
       onClick={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}
@@ -51,13 +65,32 @@ export function PromptDialog({ item, onClose, onError }: Props) {
           <X size={21} />
         </button>
         <div className="dialog-media">
-          <img
-            className="full-image"
-            src={image.src}
-            alt={image.alt || item.title}
-            width={image.width}
-            height={image.height}
-          />
+          <button
+            className="detail-image-trigger"
+            aria-label={`全屏预览：${item.title}`}
+            onClick={() => setPreviewOpen(true)}
+            title="点击全屏预览"
+          >
+            <img
+              className="full-image"
+              src={image.src}
+              alt={image.alt || item.title}
+              width={image.width}
+              height={image.height}
+            />
+          </button>
+          <div className="dialog-media-tools">
+            <button className="image-tool" onClick={() => setPreviewOpen(true)}>
+              <Maximize2 size={15} aria-hidden="true" />
+              <span>全屏预览</span>
+            </button>
+            <ImageDownloadLink
+              image={image}
+              title={item.title}
+              imageIndex={imageIndex}
+              imageCount={item.images.length}
+            />
+          </div>
           {item.images.length > 1 && (
             <div className="image-pagination">
               <button
@@ -111,6 +144,16 @@ export function PromptDialog({ item, onClose, onError }: Props) {
           </div>
         </div>
       </div>
+      {previewOpen && (
+        <ImagePreviewDialog
+          image={image}
+          title={item.title}
+          imageIndex={imageIndex}
+          imageCount={item.images.length}
+          onMove={move}
+          onClose={() => setPreviewOpen(false)}
+        />
+      )}
     </dialog>
   );
 }
