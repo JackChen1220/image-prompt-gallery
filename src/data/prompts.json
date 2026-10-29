@@ -5935,24 +5935,6 @@
     ]
   },
   {
-    "id": "336",
-    "title": "个人网页视觉设计",
-    "category": "UI 与界面",
-    "prompt": "原文未公开，案例目标是生成一张高完成度的个人主页视觉设计图。",
-    "tags": ["UI与界面", "UI 截图系统", "科技", "界面", "UI", "Creative"],
-    "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
-    "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-336",
-    "images": [
-      {
-        "src": "/images/prompt-336.webp",
-        "thumbnail": "/images/prompt-336-thumb.webp",
-        "width": 1536,
-        "height": 1024,
-        "alt": "个人网页视觉设计"
-      }
-    ]
-  },
-  {
     "id": "335",
     "title": "朋友圈截图生成",
     "category": "UI 与界面",
